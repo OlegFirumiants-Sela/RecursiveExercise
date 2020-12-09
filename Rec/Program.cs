@@ -7,7 +7,7 @@ namespace Rec
     {
         static void Main(string[] args)
         {
-            RecMet27();
+            RecMet1();
         }
 
         static void RecMet1()
