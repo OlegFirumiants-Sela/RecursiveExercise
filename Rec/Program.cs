@@ -7,7 +7,7 @@ namespace Rec
     {
         static void Main(string[] args)
         {
-            RecMet1();
+            RecMet23();
         }
 
         static void RecMet1()
@@ -16,6 +16,16 @@ namespace Rec
             var i = int.Parse(Console.ReadLine());
 
             Console.WriteLine(r.RunRec(i));
+
+            Console.ReadLine();
+        }
+
+        static void RecMet2()
+        {
+            var r = new Rec02();
+            var arr = new int[] { 10, 20, 30, 40, 50, 60, 70 };
+
+            r.RunRec(arr);
 
             Console.ReadLine();
         }
@@ -30,6 +40,16 @@ namespace Rec
             Console.ReadLine();
         }
 
+        static void RecMet4()
+        {
+            var r = new Rec04();
+            var i = int.Parse(Console.ReadLine());
+
+            r.RunRec(i);
+
+            Console.ReadLine();
+        }
+
         static void RecMet5()
         {
             var r = new Rec05();
@@ -40,12 +60,41 @@ namespace Rec
             Console.ReadLine();
         }
 
+        static void RecMet6()
+        {
+            var r = new Rec06();
+            var arr = new int[] { 10, 20, 30, 40, 50, 60, 70 };
+
+            Console.WriteLine(r.RunRec(arr));
+
+            Console.ReadLine();
+        }
+
         static void RecMet7()
         {
             var r = new Rec07();
-            var arr = new int[] { 10, 20, 30, 40, 20, 50, 60, 70, 20 };
+            var arr = new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 };
 
             Console.WriteLine(r.RunRec(arr, 20));
+
+            Console.ReadLine();
+        }
+
+        static void RecMet8()
+        {
+            var r = new Rec08();
+            var arr = new int[][]
+            {
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 },
+                new int[] { 20, 10, 20, 30, 40, 20, 50, 60, 70, 20 }
+            };
+
+            Console.WriteLine(r.RunRec(arr, 20, 0, 0));
 
             Console.ReadLine();
         }
@@ -60,6 +109,16 @@ namespace Rec
             Console.ReadLine();
         }
 
+        static void RecMet10()
+        {
+            var r = new Rec10();
+            var i = 1221;
+
+            Console.WriteLine(r.RunRec(i, 1, 2));
+
+            Console.ReadLine();
+        }
+
         static void RecMet11()
         {
             var r = new Rec11();
@@ -67,6 +126,15 @@ namespace Rec
             var s = i.ToString();
 
             Console.WriteLine(r.RunRec(s, '1', '2'));
+
+            Console.ReadLine();
+        }
+
+        static void RecMet12()
+        {
+            var r = new Rec12();
+
+            Console.WriteLine(r.RunRec(15, 51));
 
             Console.ReadLine();
         }

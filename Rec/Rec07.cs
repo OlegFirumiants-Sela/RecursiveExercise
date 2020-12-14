@@ -9,20 +9,13 @@ namespace Rec
             if (arr.Length <= 0)
                 return 0;
             if (arr.Length == 1)
-                if (arr[arr.Length - 1] == num)
+                if (arr[0] == num)
                     return 1;
                 else return 0;
-            if (arr[arr.Length - 1] == num)
-                return 1 + RunRec(GetSubArray(arr), num);
+            if (arr[0] == num)
+                return 1 + RunRec(arr[1..arr.Length], num);
             else 
-                return RunRec(GetSubArray(arr), num);
-        }
-
-        private int[] GetSubArray(int[] arr)
-        {
-            Index iFrom = 0;
-            Index iTo = arr.Length - 1;
-            return arr[iFrom..iTo];
+                return RunRec(arr[1..arr.Length], num);
         }
     }
 }

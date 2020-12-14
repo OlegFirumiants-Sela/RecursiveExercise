@@ -6,15 +6,14 @@ namespace Rec
     {
         public void RunRec(int[] arr)
         {
-            if (arr.Length == 1)
+            if (arr.Length == 0)
                 return;
 
-            if (arr.Length % 2 == 0)
+            if (arr.Length % 2 != 0)
                 Console.WriteLine(arr[arr.Length - 1]);
 
             RunRec(GetSubArray(arr));
         }
-
         private int[] GetSubArray(int[] arr)
         {
             Index iFrom = 0;
