@@ -7,12 +7,12 @@ namespace Rec
     public class Rec13
     {
 
-        public void RunRec(int n)
+        public void GetAllPossibleOptionsToSumNumber(int n)
         {
             List<int> arr = new List<int>();
-            RunRec(arr, 1, n);
+            GetAllPossibleOptionsToSumNumber(arr, 1, n);
         }
-        private void RunRec(List<int> arr, int i, int n)
+        private void GetAllPossibleOptionsToSumNumber(List<int> arr, int i, int n)
         {
             if (n == 0)
                 printList(arr);
@@ -21,7 +21,7 @@ namespace Rec
             {
                 arr.Add(j);
 
-                RunRec(arr, j, n - j);
+                GetAllPossibleOptionsToSumNumber(arr, j, n - j);
 
                 arr.RemoveAt(arr.Count - 1);
             }

@@ -6,7 +6,7 @@ namespace Rec
 {
     public class Rec02
     {
-        public void RunRec(int[] arr)
+        public void PrintArray(int[] arr)
         {
             if (arr.Length == 1)
             {
@@ -14,11 +14,8 @@ namespace Rec
                 return;
             }
             Console.WriteLine(arr[0]);
-            RunRec(arr[1..arr.Length]);
+            PrintArray(arr[1..arr.Length]);
         }
-
-
-
 
         private static void RunRec(int[] arr, int index)
         {

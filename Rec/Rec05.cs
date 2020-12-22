@@ -4,7 +4,7 @@ namespace Rec
 {
     public class Rec05
     {
-        public void RunRec(int[] arr)
+        public void PrintOddIndexesInArray(int[] arr)
         {
             if (arr.Length == 0)
                 return;
@@ -12,7 +12,7 @@ namespace Rec
             if (arr.Length % 2 != 0)
                 Console.WriteLine(arr[arr.Length - 1]);
 
-            RunRec(GetSubArray(arr));
+            PrintOddIndexesInArray(GetSubArray(arr));
         }
         private int[] GetSubArray(int[] arr)
         {

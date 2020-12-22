@@ -2,11 +2,11 @@
 {
     public class Rec23
     {
-        public bool RunRec(int[][] arr)
+        public bool IsMultiplicationTable(int[][] arr)
         {
-            return RunRec(arr, 0, 0);
+            return IsMultiplicationTable(arr, 0, 0);
         }
-        private bool RunRec(int[][] arr, int index1, int index2)
+        private bool IsMultiplicationTable(int[][] arr, int index1, int index2)
         {
             if (index1 == arr.Length)
                 return true;
@@ -19,7 +19,7 @@
             }
             else
                 index2 = index2 + 1;
-            return RunRec(arr, index1, index2);
+            return IsMultiplicationTable(arr, index1, index2);
         }
     }
 }

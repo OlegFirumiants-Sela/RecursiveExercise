@@ -4,7 +4,7 @@ namespace Rec
 {
     public class Rec11
     {
-        public string RunRec(string number, char num1, char num2)
+        public string SwitchNumbersIfAppearCloseInNumber(string number, char num1, char num2)
         {
             if (number.Length < 2)
                 return number;
@@ -24,7 +24,7 @@ namespace Rec
                 sb.Append(number.Substring(2));
                 number = sb.ToString();
             }
-            return number[0] + RunRec(number.Substring(1), num1, num2);
+            return number[0] + SwitchNumbersIfAppearCloseInNumber(number.Substring(1), num1, num2);
         }
     }
 }

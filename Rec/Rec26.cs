@@ -6,7 +6,7 @@ namespace Rec
 {
     public class Rec26
     {
-        public bool RunRec(int[][] arr, int i, int s)
+        public bool CheckDiagonalSum(int[][] arr, int i, int s)
         {
             s += arr[i][i];
             s += arr[i][arr.Length - 1];
@@ -18,7 +18,7 @@ namespace Rec
                     return true;
                 return false;
             }
-            return RunRec(arr, i + 1, s);
+            return CheckDiagonalSum(arr, i + 1, s);
         }
     }
 }

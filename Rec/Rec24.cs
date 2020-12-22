@@ -6,7 +6,7 @@ namespace Rec
 {
     public class Rec24
     {
-        public int RunRec(int[][] arr, bool[][] checks, int n, int i, int j)
+        public int CountNeighbours(int[][] arr, bool[][] checks, int n, int i, int j)
         {
             checks[i][j] = true;
             int naibs = 0;
@@ -15,7 +15,7 @@ namespace Rec
                 if (arr[i - 1][j] == 1)
                 {
                     naibs++;
-                    naibs += RunRec(arr, checks, n, i - 1, j);
+                    naibs += CountNeighbours(arr, checks, n, i - 1, j);
                 }
             }
             if (j > 0 && !checks[i][j - 1])
@@ -23,7 +23,7 @@ namespace Rec
                 if (arr[i][j - 1] == 1)
                 {
                     naibs++;
-                    naibs += RunRec(arr, checks, n, i, j - 1);
+                    naibs += CountNeighbours(arr, checks, n, i, j - 1);
                 }
             }
             if (i < n - 2 && !checks[i + 1][j])
@@ -31,7 +31,7 @@ namespace Rec
                 if (arr[i + 1][j] == 1)
                 {
                     naibs++;
-                    naibs += RunRec(arr, checks, n, i + 1, j);
+                    naibs += CountNeighbours(arr, checks, n, i + 1, j);
                 }
             }
             if (j < n - 2 && !checks[i][j + 1])
@@ -39,7 +39,7 @@ namespace Rec
                 if (arr[i][j + 1] == 1)
                 {
                     naibs++;
-                    naibs += RunRec(arr, checks, n, i, j + 1);
+                    naibs += CountNeighbours(arr, checks, n, i, j + 1);
                 }
             }
             return naibs;

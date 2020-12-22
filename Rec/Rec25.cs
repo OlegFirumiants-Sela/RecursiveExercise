@@ -4,19 +4,19 @@ namespace Rec
 {
     public class Rec25
     {
-        public void RunRec(char[][] grid)
+        public void FillSpace(char[][] grid)
         {
             var xMid = grid[0].Length / 2;
             var yMid = grid.Length / 2;
 
             Print(grid);
 
-            RunRec(grid, xMid, yMid);
+            FillSpace(grid, xMid, yMid);
             Console.Write("\n\n");
 
             Print(grid);
         }
-        private void RunRec(char[][] grid, int indX, int indY)
+        private void FillSpace(char[][] grid, int indX, int indY)
         {
             if (grid[indX][indY] == '1') 
                 return;
@@ -24,15 +24,15 @@ namespace Rec
             int tempIndX = indX;
             int tempIndY = indY;
             if (indX < grid.Length - 1)
-                RunRec(grid, indX + 1, indY);
+                FillSpace(grid, indX + 1, indY);
             indX = tempIndX;
-            if (indX > 0) 
-                RunRec(grid, indX - 1, indY);
-            if (indY < grid[0].Length - 1) 
-                RunRec(grid, indX, indY + 1);
+            if (indX > 0)
+                FillSpace(grid, indX - 1, indY);
+            if (indY < grid[0].Length - 1)
+                FillSpace(grid, indX, indY + 1);
             indY = tempIndY;
-            if (indY > 0) 
-                RunRec(grid, indX, indY - 1);
+            if (indY > 0)
+                FillSpace(grid, indX, indY - 1);
             return;
         }
 

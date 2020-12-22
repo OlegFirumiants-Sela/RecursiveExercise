@@ -6,13 +6,13 @@ namespace Rec
 {
     public class Rec10
     {
-        public int RunRec(int num, int x, int y)
+        public int SwitchNumersIfAppearCloseOnTheSides(int num, int x, int y)
         {
             string number = num.ToString();
             char[] numberArr = number.ToCharArray();
-            return RunRec(number, numberArr, x.ToString()[0], y.ToString()[0], 0, 1);
+            return SwitchNumersIfAppearCloseOnTheSides(number, numberArr, x.ToString()[0], y.ToString()[0], 0, 1);
         }
-        private int RunRec(string num, char[] numArr, char x, char y, int i, int j)
+        private int SwitchNumersIfAppearCloseOnTheSides(string num, char[] numArr, char x, char y, int i, int j)
         {
             if (j >= numArr.Length)
             {
@@ -29,7 +29,7 @@ namespace Rec
                     numArr[i] = numArr[j];
                     numArr[j] = tmp;
                 }
-                return RunRec(num, numArr, x, y, ++i, ++j);
+                return SwitchNumersIfAppearCloseOnTheSides(num, numArr, x, y, ++i, ++j);
             }
         }
 
